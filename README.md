@@ -1,6 +1,6 @@
 # Mein Projekt für die Casablanca-Bewerbung
 
-Hier ist meine Lösung für die Aufgaben im Bewerbungsprozess.  
+Hier sind meine Lösungen für die Aufgabe im Bewerbungsprozess.  
 Das Projekt besteht aus drei Teilen:
 
 ## 1. Merge-Sort in C#
