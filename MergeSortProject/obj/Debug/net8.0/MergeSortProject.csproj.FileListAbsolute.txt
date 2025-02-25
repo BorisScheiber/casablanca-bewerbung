@@ -1,0 +1,14 @@
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/bin/Debug/net8.0/MergeSortProject
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/bin/Debug/net8.0/MergeSortProject.deps.json
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/bin/Debug/net8.0/MergeSortProject.runtimeconfig.json
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/bin/Debug/net8.0/MergeSortProject.dll
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/bin/Debug/net8.0/MergeSortProject.pdb
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.AssemblyInfoInputs.cache
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.AssemblyInfo.cs
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.csproj.CoreCompileInputs.cache
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.dll
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/refint/MergeSortProject.dll
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.pdb
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/MergeSortProject.genruntimeconfig.cache
+/Users/bobbybrain/Desktop/Casablanca/MergeSortProject/obj/Debug/net8.0/ref/MergeSortProject.dll

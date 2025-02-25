@@ -1,0 +1,134 @@
+openapi: 3.0.0
+info:
+  title: Hotel Pricing API
+  description: Simple API to manage hotel seasons and price categories
+  version: 1.0.0
+  contact:
+    name: Boris Scheiber
+
+servers:
+  - url: https://api.casablanca.at/v1
+    description: Main API server
+
+paths:
+  /seasons:
+    post:
+      summary: Create a new season
+      description: Adds a new season with name, date range, and price adjustment
+      operationId: createSeason
+      tags:
+        - Seasons
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Season'
+      responses:
+        '201':
+          description: Season created successfully
+        '400':
+          description: Invalid request
+
+    get:
+      summary: Get all seasons
+      operationId: getSeasons
+      tags:
+        - Seasons
+      responses:
+        '200':
+          description: List of all seasons
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Season'
+
+  /seasons/{seasonId}:
+    delete:
+      summary: Delete a season
+      description: Removes a season by its ID
+      operationId: deleteSeason
+      tags:
+        - Seasons
+      parameters:
+        - name: seasonId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Season deleted successfully
+        '404':
+          description: Season not found
+
+  /price-categories/{categoryId}:
+    put:
+      summary: Update a price category
+      description: Modify an existing price category
+      operationId: updatePriceCategory
+      tags:
+        - PriceCategories
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PriceCategory'
+      responses:
+        '200':
+          description: Price category updated successfully
+        '400':
+          description: Invalid request
+        '404':
+          description: Price category not found
+
+components:
+  schemas:
+    Season:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+        startDate:
+          type: integer
+          format: int64
+          description: Unix timestamp (seconds since 1970)
+        endDate:
+          type: integer
+          format: int64
+          description: Unix timestamp (seconds since 1970)
+        priceChange:
+          type: number
+          description: Price adjustment percentage (e.g., 0.20 for +20%)
+      required:
+        - name
+        - startDate
+        - endDate
+        - priceChange
+
+    PriceCategory:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+        surcharge:
+          type: number
+          description: Percentage surcharge (e.g., 0.05 for +5%)
+      required:
+        - name
+        - surcharge
